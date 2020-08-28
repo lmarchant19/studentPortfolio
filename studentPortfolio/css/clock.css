@@ -1,0 +1,19 @@
+/*********************************************************************
+
+*Original Author: Logan Marchant                                  
+*Date Created: 02/20/2020                                       
+*Version: 1.0                                                
+*Date Last Modified: 02/20/2020                              
+*Modified by: Logan Marchant                                          
+*Modification log: 1   
+
+Shows the style of the clock and where it's displayed.
+
+**********************************************************************/
+
+.clock {
+    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+}

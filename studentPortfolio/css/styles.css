@@ -1,0 +1,114 @@
+/*********************************************************************
+
+*Original Author: Logan Marchant                                  
+*Date Created: 11/06/2019                                       
+*Version: 1.1                                                
+*Date Last Modified: 02/20/2020                              
+*Modified by: Logan Marchant                                          
+*Modification log: 1   
+
+Fixed the nav bar of my previous version. Looks a lot cleaner and nicer now.
+
+**********************************************************************/
+@font-face {
+    font-family: 'norwesterregular';
+    src: url('../fonts/norwester-webfont.woff2') format('woff2'),
+         url('../fonts/norwester-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+h2{
+    font-family: 'norwesterregular';
+}
+.google{
+    font-family: 'Righteous', sans-serif, "Courier New";
+    font-size: 3em;
+}
+html{
+    background-color: gray;
+}
+header h1{
+    width: 50%;
+    text-align: center;
+    margin-bottom: 2em;
+    font-size: 3em;
+    color: white;
+}
+header img{
+    width: 35%;
+}
+header nav li{
+	width: 33.33333%;
+	float: left;
+    display: block;
+    margin-bottom: 5%;
+    font-size: 2.5em;
+    text-align: center;
+}
+main {
+	width: 100%;
+	float: left;
+	font-size: 1em;
+    text-align: center;
+    background-color: lightgray;
+    border-top-left-radius: 2em;
+	border-top-right-radius: 2em;
+	border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    margin-bottom: 20px;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color
+}
+nav li {
+  float: left;
+  width: 25%;
+}
+main ul li{
+    display: block;
+	float: left;
+	width: 50%;
+    margin-bottom: 30px;
+}
+main ul li img{
+    float: left;
+    display: block;
+    width: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 50%;
+}
+hr{
+    width: 50%;
+}
+form{
+   text-align: left;
+}
+nav ul li a {
+	background-color: black;
+    color: white;
+    text-decoration: none;
+	display: block;
+}
+nav ul li a:visited {
+	color: white;
+}
+nav ul li a:hover {
+	background-color: white;
+	color:black;
+}
+div.contactInfo{
+    padding-top: 15em;
+    text-align: center;
+}
+footer{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 25%;
+    padding-bottom: 10px;
+    color: white;
+}
