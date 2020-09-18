@@ -3,10 +3,13 @@
 #
 #Administration page
 #Name       Date          Description
-#Logan      9/11/2020     Added admin
+#Logan      9/11/2020     Added admin info to website.
+#Logan      9/18/2020     Added function calls to database.
 #
 #********************************************************************************* 
-   require_once('database.php');
+   require_once('./model/database.php');
+   require_once('./model/employee.php');
+   require_once('./model/visitor.php');
    
    //echo "Connection OK" 
     
@@ -18,26 +21,13 @@ if (!isset($empID)) {
         $empID = 1;
     }
 }
-   
   // Get all employees
-$query = 'SELECT * FROM employee
-                       ORDER BY employeeID';
-$statement = $db->prepare($query);
-$statement->execute();
-$employees = $statement->fetchAll();
-$statement->closeCursor();
+
+$employees = getEmployees();
 
 // Get vistitors for employee
-$queryVisitors = 'SELECT * FROM visitor
-                  WHERE employeeID = :employeeID
-                  ORDER BY visitor_id';
-$statement3 = $db->prepare($queryVisitors);
-$statement3->bindValue(':employeeID', $empID);
-$statement3->execute();
-$visitors = $statement3->fetchAll();
-$statement3->closeCursor();  
 
-
+$visitors = getVisitorByEmp($empID);
 ?>
 
 <!DOCTYPE html>
@@ -91,7 +81,7 @@ $statement3->closeCursor();
                 <td><?php echo $visitor['visitor_email']; ?></td>
                 <td><?php echo $visitor['visitor_msg']; ?></td>
                 <td><?php echo $visitor['visit_date']; ?></td>
-                <td class="right"><?php echo $product['listPrice']; ?></td>
+                
                 <td><form action="delete_visitor.php" method="post">
                     <input type="hidden" name="visitor_id"
                            value="<?php echo $visitor['visitor_id']; ?>">
