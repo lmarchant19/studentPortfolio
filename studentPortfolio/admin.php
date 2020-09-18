@@ -53,6 +53,7 @@ $visitors = getVisitorByEmp($empID);
             <li><a href="index.html">Home</a></li>
             <li><a href="experience.html">Experience</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.php">Admin</a></li>
          </ul>
       </nav>
    </header>
