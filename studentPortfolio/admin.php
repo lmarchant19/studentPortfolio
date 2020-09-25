@@ -5,28 +5,30 @@
 #Name       Date          Description
 #Logan      9/11/2020     Added admin info to website.
 #Logan      9/18/2020     Added function calls to database.
-#
+#Logan      9/23/2020     Added secure connection
 #********************************************************************************* 
-   require_once('./model/database.php');
-   require_once('./model/employee.php');
-   require_once('./model/visitor.php');
-   
-   //echo "Connection OK" 
-    
-   // Get category ID
+ require_once('util/secure_conn.php');
+require_once('util/valid_admin.php');
+
+require_once('./model/database.php');
+require_once('./model/employee.php');
+require_once('./model/visitor.php');
+
+/* echo "Connection ok"; */
+
+// Get category ID
 if (!isset($empID)) {
-    $empID = filter_input(INPUT_GET, 'empID', 
+    $empID = filter_input(INPUT_GET, 'empID',
             FILTER_VALIDATE_INT);
     if ($empID == NULL || $empID == FALSE) {
         $empID = 1;
     }
 }
-  // Get all employees
 
+// Get all employees
 $employees = getEmployees();
 
-// Get vistitors for employee
-
+// Get visitors for employee
 $visitors = getVisitorByEmp($empID);
 ?>
 
