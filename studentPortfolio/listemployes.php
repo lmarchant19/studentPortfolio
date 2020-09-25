@@ -4,35 +4,12 @@
 #Employee List
 #Name       Date          Description
 #Logan      9/16/2020     Displays employees in order alphabetically
-#
+#Logan      9/23/2020     Added include to database.php
 #********************************************************************************* 
-$dsn = 'mysql:host=localhost;dbname=lmportfolio';
-$username = 'lm_user';
-$password = 'Pa$$w0rd';
 
-class Database {
-    private static $dsn = 'mysql:host=localhost;dbname=lmportfolio';
-    private static $username = 'lm_user';
-    private static $password = 'Pa$$w0rd';
-    private static $db;
 
-    private function __construct() {}
+require_once('./model/database.php');
 
-    public static function getDB () {
-        if (!isset(self::$db)) {
-            try {
-                self::$db = new PDO(self::$dsn,
-                                     self::$username,
-                                     self::$password);
-            } catch (PDOException $e) {
-                $error_message = $e->getMessage();
-                //include('../errors/database_error.php');
-                exit();
-            }
-        }
-        return self::$db;
-    }
-}        
 
 class Employee{
     private $id;
