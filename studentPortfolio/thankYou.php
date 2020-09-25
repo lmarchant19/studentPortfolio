@@ -6,7 +6,7 @@
     /*                                                                                        */
     /******************************************************************************************/
     
-   $visitor_name = filter_input(INPUT_POST, 'name');
+    $visitor_name = filter_input(INPUT_POST, 'name');
     $visitor_email = filter_input(INPUT_POST, 'email');
     $visitor_msg = filter_input(INPUT_POST, 'message');
     
@@ -53,7 +53,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="experience.html">Experience</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="login.php">Admin</a></li>
+            <li><a href="admin.php">Admin</a></li>
          </ul>
       </nav>
    </header>
